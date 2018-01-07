@@ -1,0 +1,33 @@
+{
+  "name": "dependency_graphs",
+  "version": "1.0.0",
+  "description": "Graph Your Dependencies with Madge!  Say NO to Circular Dependencies!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WakeskaterX/dependency_graphs.git"
+  },
+  "keywords": [
+    "Talk",
+    "Example",
+    "Madge",
+    "Dependency",
+    "Graphs"
+  ],
+  "author": "Jason Carter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WakeskaterX/dependency_graphs/issues"
+  },
+  "homepage": "https://github.com/WakeskaterX/dependency_graphs#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1"
+  }
+}
