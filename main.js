@@ -1,15 +1,33 @@
 // Super Amazing CLI Application
 global.Promise = require('bluebird');
 
-const printWord = require('./lib/printWord');
+let print;
 const convert = require('./lib/convert');
 
 function runApp(input) {
-  return printWord('\nHello ')
-    .then(() => printWord(convert.asciiArrayToText(input)))
-    .then(() => printWord('\n'))
+  return print.init()
+    .then(() => printLetter('\n'))
+    .then(() => printLetter('H'))
+    .then(() => printLetter('e'))
+    .then(() => printLetter('l'))
+    .then(() => printLetter('l'))
+    .then(() => printLetter('o'))
+    .then(() => printLetter(' '))
+    .then(() => print.ascii(input))
+    .then(() => print.word('\n'))
     .then(() => Promise.delay(1000))
     .then(() => process.exit());
 }
+
+function printLetter(l) {
+  return Promise.delay(100).then(() => Promise.resolve(process.stdout.write(l)));
+}
+
+module.exports = {
+  printLetter,
+};
+
+
+print = require('./lib/print');
 
 runApp([87, 111, 114, 108, 100]);

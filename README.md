@@ -22,3 +22,11 @@ Ubuntu
 For example, from the root of this project:
 `madge --image ./graphs/main.svg ./main.js`
 
+## Bad vs Good
+To see the difference between a good graph of a repo and a poorly constructed one, you can view them with:
+
+### Good
+`git checkout master`
+
+### Bad
+`git checkout legacy`
