@@ -1,8 +1,9 @@
 // Super Amazing CLI Application
 global.Promise = require('bluebird');
 
-let print;
-let convert;
+const print = require('./lib/print');
+const convert = require('./lib/convert');
+const printLetter = require('./lib/printLetter');
 
 function runApp(input) {
   return printLetter('H')
@@ -16,16 +17,5 @@ function runApp(input) {
     .then(() => Promise.delay(1000))
     .then(() => process.exit());
 }
-
-function printLetter(l) {
-  return Promise.delay(100).then(() => Promise.resolve(process.stdout.write(l)));
-}
-
-module.exports = {
-  printLetter,
-};
-
-print = require('./lib/print');
-convert = require('./lib/convert');
 
 runApp([87, 111, 114, 108, 100]);
