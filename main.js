@@ -2,12 +2,10 @@
 global.Promise = require('bluebird');
 
 let print;
-const convert = require('./lib/convert');
+let convert;
 
 function runApp(input) {
-  return print.init()
-    .then(() => printLetter('\n'))
-    .then(() => printLetter('H'))
+  return printLetter('H')
     .then(() => printLetter('e'))
     .then(() => printLetter('l'))
     .then(() => printLetter('l'))
@@ -27,7 +25,7 @@ module.exports = {
   printLetter,
 };
 
-
 print = require('./lib/print');
+convert = require('./lib/convert');
 
 runApp([87, 111, 114, 108, 100]);
